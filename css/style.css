@@ -1,0 +1,234 @@
+/* Start Global */
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+:root {
+   --bg-blue: hsl(233, 100%, 69%);
+   --bg-green: hsl(171, 66%, 44%);
+   --text-light-dark: hsl(210, 10%, 33%);
+   --text-light-blue: hsl(201, 11%, 66%);
+   --main-padding: 3.2em;
+}
+body {
+   font-size: 18px;
+   font-family: "Bai Jamjuree", sans-serif;
+   color: var(--text-light-dark);
+}
+p {
+   color: var(--text-light-blue);
+   line-height: 1.5;
+}
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+a {
+   text-decoration: none;
+}
+/* main title */
+.main-title {
+   text-align: center;
+   margin: 1em 0 3.2em;
+}
+.main-title h2 {
+   letter-spacing: 1px;
+}
+.main-title p {
+   width: 64%;
+   margin: 0 auto;
+}
+/* custom button */
+.btn-con {
+   text-align: center;
+}
+.btn {
+   all: unset;
+   color: #fff;
+   padding: 0.75em 1.5em;
+   border-radius: 50px;
+   margin: .5em 0.2em;
+   cursor: pointer;
+}
+.btn:hover {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+}
+.btn-ios {
+   background-color: var(--bg-green);
+   box-shadow: 0 3px 5px var(--bg-green);
+}
+.btn-mac {
+   background-color: var(--bg-blue);
+   box-shadow: 0 3px 5px var(--bg-blue);
+}
+
+/* ---------------- End Global ---------------- */
+/* Start Container */
+.container {
+   padding-left: calc(1rem - 1px);
+   padding-right: calc(1rem -1px);
+   margin-left: auto;
+   margin-right: auto;
+}
+@media (min-width: 576px) {
+   .container {
+      width: 540px;
+   }
+}
+@media (min-width: 768px) {
+   .container {
+      width: 720px;
+   }
+}
+@media (min-width: 992px) {
+   .container {
+      width: 960px;
+   }
+}
+@media (min-width: 1200px) {
+   .container {
+      width: 1140px;
+   }
+}
+@media (min-width: 1400px) {
+   .container {
+      width: 1320px;
+   }
+}
+/* ---------------- End Container ---------------- */
+/* Start Header */
+header {
+   background: url(../images/bg-header-desktop.png) no-repeat;
+   background-size: contain;
+   min-height: 100vh;
+   display: grid;
+   place-items: center;
+   text-align: center;
+}
+/* ---------------- End Header ---------------- */
+/* ---------------- Start Snipes ---------------- */
+.snipes {
+   padding: var(--main-padding) 0;
+}
+.snipes .content {
+   display: flex;
+   flex-wrap: wrap;
+}
+.snipes .content .left {
+   flex-basis: 50%;
+}
+.snipes .content .right {
+   flex-basis: 50%;
+}
+.snipes .content .left img {
+   max-width: 100%;
+}
+.snipes .content .left .image {
+   position: relative;
+   left: -150px;
+   margin-right: -100px;
+}
+.snipes .content .right p {
+   width: 75%;
+}
+/* ---------------- End Snipes ---------------- */
+/* Start Clipboard*/
+.clipboard {
+   padding: var(--main-padding) 0;
+}
+.clipboard .content {
+   text-align: center;
+}
+.clipboard .content img {
+   max-width: 100%;
+}
+/* ---------------- End Clipboard ---------------- */
+/* Start workflow */
+.workflow {
+   padding: var(--main-padding) 0;
+}
+.workflow .content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 1em;
+   text-align: center;
+}
+.workflow .content img {
+   width: 30px;
+}
+/* ---------------- End Workflow ---------------- */
+/* Start layer photo */
+.layer-photo {
+   padding: var(--main-padding) 0;
+}
+.layer-photo .content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   gap: 1em;
+}
+.layer-photo .content img {
+   max-width: 100%;
+}
+/* ---------------- End layer photo ---------------- */
+/* Start clib small */
+.clib {
+   padding: var(--main-padding) 0;
+}
+/* ---------------- End clip-small ---------------- */
+/* Start footer */
+footer {
+   background-color: #F5F6F8;
+   padding: 30px 0;
+}
+footer .content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+   gap: 20px;
+}
+footer .content .image {
+   display: flex;
+   align-items: center;
+}
+footer .content .image img {
+   max-width: 50px;
+}
+footer .content ul:not(:last-child) li {
+   padding-bottom: 5px;
+}
+footer .content .social {
+   display: flex;
+}
+footer .content .social li {
+   padding-right: 15px;
+
+}
+/* ---------------- End footer ---------------- */
+/* Start Responsive  */
+@media (max-width:991.98px) {
+   body {
+      font-size: 14px;
+      text-align: center;
+   }
+   .main-title p {
+      width: 100%;
+   }
+   .snipes .content  {
+      display: block;
+      text-align: center;
+   }
+   .snipes .content .right p {
+      width: 100%;
+   }
+   .snipes .content .left .image {
+      all: unset;
+   }
+   .layer-photo .content {
+      justify-content: center;
+   }
+   footer :is(.social,.image) {
+      justify-content: center;
+   }
+}
+/* End Responsive  */
